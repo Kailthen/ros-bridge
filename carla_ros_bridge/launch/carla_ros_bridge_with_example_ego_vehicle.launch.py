@@ -12,7 +12,7 @@ def generate_launch_description():
         ),
         launch.actions.DeclareLaunchArgument(
             name='port',
-            default_value='2000'
+            default_value='20000'
         ),
         launch.actions.DeclareLaunchArgument(
             name='timeout',
