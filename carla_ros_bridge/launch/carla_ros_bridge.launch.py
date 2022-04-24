@@ -96,6 +96,11 @@ def generate_launch_description():
                 {
                     'ego_vehicle_role_name': launch.substitutions.LaunchConfiguration('ego_vehicle_role_name')
                 }
+            ],
+            remappings=[
+                ("/carla/ego_vehicle/lidar", "/sensing/lidar/concatenated/pointcloud"),
+                ("/carla/ego_vehicle/gnss", "/carla/ego_vehicle/gnss"),
+                ("/carla/ego_vehicle/imu", "/sensing/imu/imu_data")
             ]
         )
     ])
